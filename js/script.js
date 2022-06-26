@@ -15,7 +15,7 @@
 		isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
 		windowReady = false,
 		isNoviBuilder = false,
-		livedemo = true,
+		livedemo = false,
 
 		plugins = {
 			bootstrapTooltip:        $( '[data-toggle="tooltip"]' ),
@@ -1867,6 +1867,7 @@
 					d.setDate(d.getDate() + 42);
 					settings[ $countDownItem.attr('data-type') ] = d;
 				} else {
+					console.info($countDownItem.attr( 'data-time' ));
 					settings[ $countDownItem.attr('data-type') ] = new Date( $countDownItem.attr( 'data-time' ) );
 				}
 
